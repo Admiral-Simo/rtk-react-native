@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./features/counterSlice";
+import orderReducer from "./features/orderSlice";
 import { randomApi } from "./apis/randomApi";
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    order: orderReducer,
     [randomApi.reducerPath]: randomApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
